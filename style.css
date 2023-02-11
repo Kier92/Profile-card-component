@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Fraunces:opsz,wght@9..144,700&family=Inter:wght@400;700&family=Kumbh+Sans:wght@400;700&family=Lexend+Deca&family=Montserrat:wght@500;700&family=Open+Sans&family=Outfit:wght@400;700&family=Overpass:wght@400;600&family=Poppins:wght@400;600&family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+    --desktop-width: 1400px;
+    --mobile-width: 375px;
+
+    /* Primary Colors */
+    --dark-cyan: hsl(185, 75%, 39%);
+    --desaturated-blue: hsl(229, 23%, 23%);
+    --grayish-blue: hsl(227, 10%, 46%);
+
+    /* Neutral */
+    -dark-gray: hsl(0, 0%, 59%);
+
+    /* font-size */
+    --font-size: 18px;
+
+}
+
+main {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Kumbh Sans', sans-serif;
+    background-color: var(--dark-cyan);
+    overflow: hidden;
+}
+
+.bg-top {
+    height: 100vh;
+    transform: translate(-70vw, -50vh);
+    position: fixed;
+}
+
+.bg-bottom {
+    height: 100vh;
+    transform: translate(75vw, 50vh);
+    position: fixed;
+}
+
+.container {
+    width: calc(var(--mobile-width) - 2rem);
+    margin: 0 auto;
+}
+
+.image-top img {
+    width: 100%;
+    border-top-left-radius: 1rem;
+    border-top-right-radius: 1rem;
+}
+
+.profile-content {
+    text-align: center;
+    position: relative;
+    background-color: #fff;
+    padding-bottom: 3rem;
+    border-bottom-left-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+}
+
+.profile-img {
+    position: absolute;
+    top: 9.6rem;
+}
+
+.profile-img img {
+    border-radius: 50%;
+    border: 12px solid #fff;
+}
+
+.title {
+    font-size: 2rem;
+    color: var(--desaturated-blue);
+    font-weight: 700;
+    padding: 4rem 0 1rem 0;
+    margin: 0;
+    margin-top: -.3rem;
+}
+
+span {
+    font-size: 1.5rem;
+    color: var(--grayish-blue);
+}
+
+.place {
+    color: var(--grayish-blue);
+    margin: 0;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-box {
+    margin-top: 3rem;
+}
+
+.small-title {
+    color: var(--desaturated-blue);
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+p {
+    font-size: .8rem;
+    font-size: 700;
+    margin: .5rem 0 0 0;
+}
+
+
+@media screen and (min-width: 1200px) {
+    .profile-img {
+        top: 12.5rem;
+    }
+
+    .container {
+        width: calc(var(--desktop-width) / 4);
+    }
+
+    .bg-top {
+        height: 100vh;
+        transform: translate(-30vw, -50vh);
+        position: fixed;
+    }
+    
+    .bg-bottom {
+        height: 100vh;
+        transform: translate(29vw, 50vh);
+        position: fixed;
+    }
+}
